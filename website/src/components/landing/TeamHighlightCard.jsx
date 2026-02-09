@@ -15,12 +15,12 @@ export const TeamHighlightCard = () => {
             <img
               src={personImg}
               alt="Jay Hao"
-              className="h-[320px] sm:h-[400px] md:h-[560px] w-auto max-w-full object-contain"
+              className="h-[220px] sm:h-[320px] md:h-[560px] w-auto max-w-full object-contain"
             />
           </div>
 
           {/* Right: text */}
-          <div className="flex-1 min-w-0 px-6 sm:px-8 md:px-12 lg:px-16 py-10 sm:py-12 md:py-16 flex flex-col justify-center gap-5">
+          <div className="flex-1 min-w-0 px-4 sm:px-8 md:px-12 lg:px-16 py-6 sm:py-10 md:py-16 flex flex-col justify-center gap-4 sm:gap-5">
 
             {/* Heading */}
             <div>
