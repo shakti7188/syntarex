@@ -25,11 +25,11 @@ export const TeamHighlightCard = () => {
             {/* Heading */}
             <div>
               <h3
-                className="text-2xl sm:text-3xl md:text-4xl uppercase tracking-tight leading-tight"
+                className="text-2xl sm:text-3xl md:text-4xl tracking-tight leading-tight"
                 style={{ color: "#fff" }}
               >
                 <span className="font-extralight">Engineered by</span>{" "}
-                <span className="font-black">Jay Hao</span>
+                <span className="font-black uppercase">JAY HAO</span>
               </h3>
               <p className="mt-2 text-base" style={{ color: "rgba(255,255,255,0.6)" }}>
                 Former CEO of OKX, one of the world&apos;s largest exchanges.
