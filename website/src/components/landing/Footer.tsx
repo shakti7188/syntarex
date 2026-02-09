@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import { Github, Twitter, Linkedin, Mail } from "lucide-react";
-import logo from "@/assets/syntarex-logo.png";
+import logo from "@/assets/syntarex-logo-cropped.png";
 
 interface FooterLink {
   label: string;
@@ -68,10 +68,7 @@ export const Footer = () => {
               className="flex items-center gap-2 mb-4 cursor-pointer"
               onClick={() => navigate("/")}
             >
-              <img src={logo} alt="SynteraX Logo" className="w-8 h-8" />
-              <span className="text-xl font-bold text-foreground">
-                SynteraX
-              </span>
+              <img src={logo} alt="SynteraX Logo" className="h-10 w-auto" />
             </div>
             <p><strong>THE WINDOW IS OPEN</strong></p>
             <p className="text-muted-foreground mb-6 max-w-sm">

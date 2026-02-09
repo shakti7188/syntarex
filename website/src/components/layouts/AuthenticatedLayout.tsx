@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import { AppNavigation } from "@/components/AppNavigation";
 import { Link } from "react-router-dom";
-import logo from "@/assets/syntarex-logo.png";
+import logo from "@/assets/syntarex-logo-cropped.png";
 import { useReferralNotifications } from "@/hooks/useReferralNotifications";
 import { useRankNotifications } from "@/hooks/useRankNotifications";
 

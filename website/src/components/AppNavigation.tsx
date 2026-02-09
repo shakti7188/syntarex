@@ -21,7 +21,7 @@ import { LanguageSelector } from "./LanguageSelector";
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import logo from "@/assets/syntarex-logo.png";
+import logo from "@/assets/syntarex-logo-cropped.png";
 
 export const AppNavigation = () => {
   const { isAdmin, signOut } = useAuth();
@@ -85,10 +85,7 @@ export const AppNavigation = () => {
             className="flex items-center gap-2 cursor-pointer hover:opacity-80 transition-opacity"
             onClick={() => navigate("/")}
           >
-            <img src={logo} alt="SynteraX Logo" className="w-8 h-8" />
-            <h1 className="text-xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-              SynteraX
-            </h1>
+            <img src={logo} alt="SynteraX Logo" className="h-10 w-auto" />
           </div>
 
           {/* Desktop Navigation */}
@@ -298,10 +295,7 @@ export const AppNavigation = () => {
                         setMobileMenuOpen(false);
                       }}
                     >
-                      <img src={logo} alt="SynteraX Logo" className="w-8 h-8" />
-                      <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
-                        SynteraX
-                      </span>
+                      <img src={logo} alt="SynteraX Logo" className="h-10 w-auto" />
                     </SheetTitle>
                   </SheetHeader>
                   
