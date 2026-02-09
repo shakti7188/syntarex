@@ -6,7 +6,7 @@ import { useState } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 import { motion, AnimatePresence } from "framer-motion";
 import { AppNavigation } from "@/components/AppNavigation";
-import logo from "@/assets/syntarex-logo-cropped.png";
+import logo from "@/assets/syntarex-logo-tight.png";
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -28,13 +28,13 @@ export const LandingNav = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b border-border/40 bg-background/80">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div
-            className="flex items-center gap-2 cursor-pointer"
+            className="flex items-center cursor-pointer"
             onClick={() => navigate("/")}
           >
-            <img src={logo} alt="SynteraX Logo" style={{ height: "60px", width: "auto" }} />
+            <img src={logo} alt="SynteraX Logo" style={{ height: "48px", width: "auto" }} />
           </div>
 
           {/* Desktop Navigation */}

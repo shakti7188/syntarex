@@ -1,34 +1,29 @@
 import { motion } from "framer-motion";
-import { Shield, Lock, TrendingUp, Users, Award, FileCheck } from "lucide-react";
+import { Zap, ShieldCheck, BatteryCharging, Server } from "lucide-react";
 
 export const TrustBadges = () => {
   const badges = [
     {
-      icon: Shield,
+      icon: Zap,
       title: "Industrial-Scale Power",
-      description: "Enterprise security standards"
     },
     {
-      icon: Lock,
+      icon: ShieldCheck,
       title: "Secured",
-      description: "Multi-signature cold storage"
     },
     {
-      icon: FileCheck,
+      icon: BatteryCharging,
       title: "Energized",
-      description: "Third-party verified"
     },
     {
-      icon: Award,
+      icon: Server,
       title: "Operational",
-      description: "Full KYC/AML compliance"
     },
-  
   ];
 
   return (
     <section className="py-16 bg-muted/30">
-      <div className="container mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,14 +31,14 @@ export const TrustBadges = () => {
           className="text-center mb-12"
         >
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
-           THE FOUNDATION
+            THE FOUNDATION
           </h2>
           <p className="text-lg text-muted-foreground">
-           BLOCK 0 : $0 Market Cap
+            BLOCK 0 : $0 Market Cap
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
           {badges.map((badge, index) => (
             <motion.div
               key={badge.title}
@@ -57,7 +52,6 @@ export const TrustBadges = () => {
                 <badge.icon className="h-8 w-8 text-primary" />
               </div>
               <h3 className="font-semibold mb-1 text-sm">{badge.title}</h3>
-              {/* <p className="text-xs text-muted-foreground">{badge.description}</p> */}
             </motion.div>
           ))}
         </div>

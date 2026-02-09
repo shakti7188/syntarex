@@ -21,7 +21,7 @@ import { LanguageSelector } from "./LanguageSelector";
 import { useTranslation } from "react-i18next";
 import React, { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
-import logo from "@/assets/syntarex-logo-cropped.png";
+import logo from "@/assets/syntarex-logo-tight.png";
 
 export const AppNavigation = () => {
   const { isAdmin, signOut } = useAuth();
