@@ -1,0 +1,11 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Clean, minimal X mark in Coinbase blue -->
+  <path d="M 140 90 L 220 170 L 256 206 L 292 170 L 372 90 L 410 90 L 292 208 L 256 244 L 220 208 L 102 90 Z" 
+        fill="#0052FF" opacity="1"/>
+  
+  <path d="M 140 422 L 220 342 L 256 306 L 292 342 L 372 422 L 410 422 L 292 304 L 256 268 L 220 304 L 102 422 Z" 
+        fill="#0052FF" opacity="1"/>
+  
+  <!-- Clean center dot -->
+  <circle cx="256" cy="256" r="24" fill="#0052FF"/>
+</svg>

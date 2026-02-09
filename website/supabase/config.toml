@@ -1,0 +1,94 @@
+project_id = "mmokswccbnfzcwatqcae"
+
+[functions.test-system]
+verify_jwt = true
+
+[functions.calculate-commissions]
+verify_jwt = true
+
+[functions.commission-engine]
+verify_jwt = true
+
+[functions.create-test-data]
+verify_jwt = true
+
+[functions.get-network-tree]
+verify_jwt = true
+
+[functions.generate-merkle-tree]
+verify_jwt = true
+
+[functions.finalize-week]
+verify_jwt = true
+
+[functions.get-claimable-settlements]
+verify_jwt = true
+
+[functions.generate-wallet-nonce]
+verify_jwt = true
+
+[functions.verify-wallet-signature]
+verify_jwt = true
+
+[functions.api-admin-machines-template]
+verify_jwt = false
+
+[functions.api-admin-machines-bulk-upload]
+verify_jwt = true
+
+[functions.mining-pool-sync-antpool]
+verify_jwt = false
+
+[functions.mining-pool-sync-f2pool]
+verify_jwt = false
+
+[functions.mining-pool-test-antpool]
+verify_jwt = false
+
+[functions.mining-pool-test-f2pool]
+verify_jwt = false
+
+[functions.api-admin-repair-referrals]
+verify_jwt = true
+
+[functions.staking-rewards-daily]
+verify_jwt = false
+
+[functions.ghost-bv-processor]
+verify_jwt = false
+
+[functions.leadership-pool-distribute]
+verify_jwt = true
+
+[functions.safety-valve-processor]
+verify_jwt = false
+
+[functions.synterax-test-suite]
+verify_jwt = true
+
+[functions.api-payment-create-order]
+verify_jwt = true
+
+[functions.api-payment-submit-tx]
+verify_jwt = true
+
+[functions.api-payment-verify]
+verify_jwt = true
+
+[functions.api-payment-status]
+verify_jwt = true
+
+[functions.api-payment-auto-detect]
+verify_jwt = true
+
+[functions.api-wallet-verify-signature]
+verify_jwt = true
+
+[functions.evaluate-user-ranks]
+verify_jwt = true
+
+[functions.api-nft-metadata]
+verify_jwt = false
+
+[functions.api-nft-queue-process]
+verify_jwt = true

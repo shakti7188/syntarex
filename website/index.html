@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    
+    <!-- Cache Control -->
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+    
+    <title>SynteraX - Professional Bitcoin Mining Platform</title>
+    <meta name="description" content="Start earning passive income with professional Bitcoin mining. 8-12% average monthly ROI, fully managed operations, transparent returns. No technical knowledge required." />
+    <meta name="author" content="SynteraX" />
+
+    <meta property="og:title" content="SynteraX - Professional Bitcoin Mining Platform" />
+    <meta property="og:description" content="Start earning passive income with professional Bitcoin mining. 8-12% average monthly ROI, fully managed operations." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://synterax.io/" />
+    <meta property="og:image" content="https://synterax.io/og-image.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="SynteraX - Professional Bitcoin Mining" />
+    <meta name="twitter:description" content="Start earning passive income with professional Bitcoin mining. 8-12% average monthly ROI." />
+    <meta name="twitter:image" content="https://synterax.io/og-image.png" />
+  </head>
+
+  <body>
+    <div id="root"></div>
+    
+    <!-- Early version check - runs BEFORE React loads -->
+    <script>
+      (async function() {
+        try {
+          var STORAGE_KEY = 'synterax-app-version';
+          var stored = localStorage.getItem(STORAGE_KEY);
+          var res = await fetch('/version.json?t=' + Date.now(), { cache: 'no-store' });
+          var data = await res.json();
+          
+          if (stored && stored !== data.buildTime) {
+            // Version mismatch - clear everything and reload
+            localStorage.setItem(STORAGE_KEY, data.buildTime);
+            
+            // Clear service workers
+            if ('serviceWorker' in navigator) {
+              var regs = await navigator.serviceWorker.getRegistrations();
+              await Promise.all(regs.map(function(r) { return r.unregister(); }));
+            }
+            
+            // Clear all caches
+            if ('caches' in window) {
+              var names = await caches.keys();
+              await Promise.all(names.map(function(n) { return caches.delete(n); }));
+            }
+            
+            // Force hard reload with cache buster
+            window.location.href = window.location.origin + window.location.pathname + '?_v=' + Date.now();
+          } else if (!stored) {
+            // First visit - just store version
+            localStorage.setItem(STORAGE_KEY, data.buildTime);
+          }
+        } catch(e) {
+          console.warn('Early version check failed:', e);
+        }
+      })();
+    </script>
+    
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
