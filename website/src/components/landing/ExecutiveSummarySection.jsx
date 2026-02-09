@@ -4,7 +4,7 @@ import bI from "../../assets/hpc-facility.png";
 
 export const ExecutiveSummarySection = () => {
   return (
-    <section className="pt-24 pb-12 bg-background">
+    <section className="pt-32 sm:pt-36 pb-12 bg-background">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Section header ── */}

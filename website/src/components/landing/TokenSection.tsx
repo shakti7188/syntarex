@@ -30,7 +30,7 @@ export const TokenSection = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-24 bg-background relative overflow-hidden">
+    <section className="pt-6 sm:pt-8 md:pt-12 pb-12 sm:pb-16 md:pb-24 bg-background relative overflow-hidden">
       {/* Background decorative elements */}
       <motion.div
         className="absolute top-20 left-10 w-48 h-48 sm:w-72 sm:h-72 bg-primary/5 rounded-full blur-3xl"
