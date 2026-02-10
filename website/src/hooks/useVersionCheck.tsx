@@ -39,6 +39,15 @@ const forceHardReload = async () => {
 export function useVersionCheck() {
   const queryClient = useQueryClient();
 
+  // Clean up cache-busting param from URL on load
+  useEffect(() => {
+    const url = new URL(window.location.href);
+    if (url.searchParams.has('_v')) {
+      url.searchParams.delete('_v');
+      window.history.replaceState({}, '', url.pathname + url.search + url.hash);
+    }
+  }, []);
+
   const checkVersion = async () => {
     try {
       // Fetch version.json with aggressive cache bypass
