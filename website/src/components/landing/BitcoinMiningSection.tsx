@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { ArrowRight, Cpu, Shield, Coins } from "lucide-react";
 import { useNavigate } from "react-router-dom";
 
+
 export function BitcoinMiningSection() {
   const navigate = useNavigate();
   const [ref, inView] = useInView({ triggerOnce: true, threshold: 0.1 });
@@ -36,10 +37,11 @@ export function BitcoinMiningSection() {
             animate={inView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
           >
-            <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-              Understanding the Basics
-            </span>
-            <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
+            <div className="inline-flex items-center gap-2 bg-primary/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4 sm:mb-6">
+              <Cpu className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+              <span className="text-xs sm:text-sm font-semibold text-primary">Understanding the Basics</span>
+            </div>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6">
               What is Bitcoin Mining?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">

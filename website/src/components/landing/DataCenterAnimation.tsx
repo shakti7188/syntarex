@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import CountUp from "react-countup";
+import xIcon from "@/assets/syntarex-x-icon-3d.png";
 
 export const DataCenterAnimation = () => {
   // Server rack configuration - 6 units for optimal performance
@@ -95,21 +96,19 @@ export const DataCenterAnimation = () => {
                   ))}
                 </div>
 
-                {/* Cooling fan indicator */}
+                {/* SynteraX logo */}
                 <motion.div
+                  className="absolute bottom-1.5 right-1.5 w-8 h-8 rounded-full bg-slate-900/80 border border-slate-500/50 flex items-center justify-center overflow-hidden"
                   animate={{ rotate: 360 }}
                   transition={{
-                    duration: 4,
+                    duration: 6,
                     repeat: Infinity,
                     ease: "linear",
+                    delay: server.delay,
                   }}
-                  className="absolute bottom-2 left-1/2 -translate-x-1/2 w-6 h-6 border-2 border-slate-500 rounded-full"
                   style={{ willChange: "transform" }}
                 >
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-4 h-0.5 bg-slate-500 rounded" />
-                    <div className="absolute w-0.5 h-4 bg-slate-500 rounded" />
-                  </div>
+                  <img src={xIcon} alt="" className="w-5 h-5 object-contain" />
                 </motion.div>
 
                 {/* Data processing glow */}

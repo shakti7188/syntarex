@@ -3,7 +3,7 @@ import personImg from "../../assets/jay-hao.png";
 
 export const TeamHighlightCard = () => {
   return (
-    <section className="w-full overflow-hidden" style={{ backgroundColor: "#000" }}>
+    <section className="w-full overflow-hidden py-8 sm:py-12 md:py-16" style={{ backgroundColor: "#000" }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row items-stretch">
 
@@ -20,7 +20,7 @@ export const TeamHighlightCard = () => {
           </div>
 
           {/* Right: text */}
-          <div className="flex-1 min-w-0 px-4 sm:px-8 md:px-12 lg:px-16 py-6 sm:py-10 md:py-16 flex flex-col justify-center gap-4 sm:gap-5">
+          <div className="flex-1 min-w-0 px-4 sm:px-8 md:px-12 lg:px-16 py-4 sm:py-6 md:py-8 flex flex-col justify-center gap-4 sm:gap-5">
 
             {/* Heading */}
             <div>

@@ -1,4 +1,5 @@
 import React from "react";
+import { Sparkles, Zap, Server } from "lucide-react";
 import heroImg from "../../assets/executive-banner.png";
 import bI from "../../assets/hpc-facility.png";
 
@@ -8,10 +9,11 @@ export const ExecutiveSummarySection = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* ── Section header ── */}
-        <span className="text-primary font-semibold text-sm uppercase tracking-wider">
-          Infrastructure
-        </span>
-        <h2 className="text-4xl md:text-5xl font-bold mt-2 mb-6">
+        <div className="inline-flex items-center gap-2 bg-primary/10 px-3 sm:px-4 py-1.5 sm:py-2 rounded-full mb-4 sm:mb-6">
+          <Server className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
+          <span className="text-xs sm:text-sm font-semibold text-primary">Infrastructure</span>
+        </div>
+        <h2 className="text-4xl md:text-5xl font-bold mb-6">
           The Mining Center
         </h2>
 
@@ -38,22 +40,32 @@ export const ExecutiveSummarySection = () => {
 
         {/* The Difference + The Engine */}
         <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-8 sm:gap-12">
-          <div>
-            <h4 className="font-semibold text-base sm:text-lg tracking-tight">
-              The Difference
-            </h4>
-            <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
-              While other projects sell "roadmaps" and renderings, we are launching with active,
-              industrial-grade infrastructure.
-            </p>
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Sparkles className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-base sm:text-lg tracking-tight">
+                The Difference
+              </h4>
+              <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                While other projects sell "roadmaps" and renderings, we are launching with active,
+                industrial-grade infrastructure.
+              </p>
+            </div>
           </div>
-          <div>
-            <h4 className="font-semibold text-base sm:text-lg tracking-tight">
-              The Engine
-            </h4>
-            <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
-              This is the physical powerhouse that drives the Bitcoin revenue for the ecosystem.
-            </p>
+          <div className="flex gap-4">
+            <div className="flex-shrink-0 w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
+              <Zap className="w-5 h-5 text-primary" />
+            </div>
+            <div>
+              <h4 className="font-semibold text-base sm:text-lg tracking-tight">
+                The Engine
+              </h4>
+              <p className="mt-2 text-muted-foreground text-sm sm:text-base leading-relaxed">
+                This is the physical powerhouse that drives the Bitcoin revenue for the ecosystem.
+              </p>
+            </div>
           </div>
         </div>
 
